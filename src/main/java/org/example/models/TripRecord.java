@@ -4,7 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.example.models.enums.TapType;
 
 import java.time.LocalDateTime;
 
@@ -12,12 +11,14 @@ import java.time.LocalDateTime;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class TapRecord {
+public class TripRecord {
 
-    private Long id;
-    private LocalDateTime tapDateTimeUTC;
-    private TapType tapType;
-    private String stopId;
+    private LocalDateTime startedDateTimeUTC;
+    private LocalDateTime finishedDateTimeUTC;
+    private Long durationSecs;
+    private String fromStopId;
+    private String toStopId;
+    private Double chargeAmount;
     private String companyId;
     private String busId;
     private String pan;
