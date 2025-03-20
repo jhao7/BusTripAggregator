@@ -14,7 +14,7 @@ public class TapRecordCSVMapper {
 
     public static final String DATE_TIME_FORMATTER_TAP_RECORD = "dd-MM-yyyy HH:mm:ss";
 
-    public List<TapRecord> mapCSV(String TapRecordCSVFilePath) {
+    public List<TapRecord> buildTapRecordList(String TapRecordCSVFilePath) {
         List<TapRecord> tapRecordList = new ArrayList<>();
 
         try {
@@ -22,7 +22,7 @@ public class TapRecordCSVMapper {
             InputStream inputFileStream = new FileInputStream(inputFile);
             BufferedReader br = new BufferedReader(new InputStreamReader(inputFileStream));
 
-            tapRecordList = br.lines().skip(1).map(line -> convertCSVtoTapRecord(line)).collect(Collectors.toList());
+            tapRecordList = br.lines().skip(1).map(line -> buildTapRecord(line)).collect(Collectors.toList());
             br.close();
         } catch (IOException e) {
             System.err.println(e.getMessage());
@@ -31,7 +31,7 @@ public class TapRecordCSVMapper {
         return tapRecordList;
     }
 
-    private TapRecord convertCSVtoTapRecord(String line) {
+    private TapRecord buildTapRecord(String line) {
         String[] csvRecord = line.split(",");
         TapRecord tapRecord = new TapRecord();
 

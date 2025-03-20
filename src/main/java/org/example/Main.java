@@ -12,8 +12,8 @@ public class Main {
         System.out.println("Hello world!");
         TapRecordCSVMapper trm = new TapRecordCSVMapper();
         //List<TapRecord> list = trm.mapCSV(Resources.getResource("csvs/TapRecords.csv").getPath());
-        List<TapRecord> list = trm.mapCSV(Resources.getResource("csvs/UnOrderedTapRecords.csv").getPath());
+        List<TapRecord> list = trm.buildTapRecordList(Resources.getResource("csvs/UnOrderedTapRecords.csv").getPath());
         TripRecordCSVBuilder trb = new TripRecordCSVBuilder();
-        trb.calculateTripRecordList(list);
+        trb.buildTripRecordList(list);
     }
 }
