@@ -48,6 +48,7 @@ public class TripRecordCSVBuilder {
     public List<TripRecord> buildTripRecordList(List<TapRecord> tapRecordList) {
         List<TripRecord> tripRecordList = new ArrayList<>();
 
+        // Filter taps of the same pan and the same bus - chronologically
         Map<Pair<String, String>, List<TapRecord>> tapRecordsGroupedByPanAndBusId =
             tapRecordList
                 .stream()
@@ -66,7 +67,11 @@ public class TripRecordCSVBuilder {
                     TripRecord tripRecord;
                     if (listIterator.hasNext()) {
                         TapRecord t2 = listIterator.next();
+
+                        // An ON Tap followed by an OFF tap would be grouped for a COMPLETED/CANCELLED trip
                         if (t2.getTapType().equals(TapType.OFF)) {
+
+                            // Only set FinishedDateTimeUTC, durationSecs, toStopId for a COMPLETED/CANCELLED trip
                             Long durationSecs =
                                     calculateDurationInSeconds(t1.getTapDateTimeUTC(), t2.getTapDateTimeUTC());
                             if (t1.getStopId().equals(t2.getStopId())) {
@@ -78,17 +83,23 @@ public class TripRecordCSVBuilder {
                                 tripRecord = buildCompletedTripRecord(t1, t2, durationSecs, chargeAmount);
                             }
                         } else {
+
+                            // Mark the first ON tap as a single ON tap if it is followed with another ON tap
+                            // Charge INCOMPLETE trip fare for any single ON tap
                             chargeAmount = formatDoubleWithTwoDecimals(calculateIncompleteChargeAmount(t1.getStopId()));
                             tripRecord = buildIncompleteTripRecord(t1, chargeAmount);
                         }
                     } else {
+
+                        // Charge incomplete trip fare for any single ON tap
                         chargeAmount = formatDoubleWithTwoDecimals(calculateIncompleteChargeAmount(t1.getStopId()));
                         tripRecord = buildIncompleteTripRecord(t1, chargeAmount);
                     }
 
                     tripRecordList.add(tripRecord);
                 } else {
-                    // Skip to the next TapRecord
+
+                    // A single OFF tap would not be counted for any trip, skip and check the next tap
                 }
             }
         }

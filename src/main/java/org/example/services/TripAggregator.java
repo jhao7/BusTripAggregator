@@ -22,6 +22,8 @@ public class TripAggregator {
 
     @PostConstruct
     public void init() throws Exception {
+        // Please replace "csvs/TapRecords.csv" with other resource names to test other taps csv files.
+        // E.g "csv/BulkTapRecords.csv", "csv/UnorderedTapRecords.csv" or "csv/UnorderedBulkTapRecords.csv"
         List<TapRecord> tapRecordList = tapRecordCSVMapper.buildTapRecordList(
                 Resources.getResource("csvs/TapRecords.csv").getPath());
         List<TripRecord> tripRecordList = tripRecordCSVBuilder.buildTripRecordList(tapRecordList);

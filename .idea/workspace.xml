@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="52b64a52-164a-4a2d-806a-e2b61a764b28" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/TripAggregator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/TripAggregator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/TripRecordCSVBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/TripRecordCSVBuilder.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,27 +180,27 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/services/TripRecordCSVBuilder.java</url>
-          <line>95</line>
+          <line>106</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/services/TripAggregator.java</url>
-          <line>24</line>
+          <line>26</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/services/TripRecordCSVBuilder.java</url>
-          <line>100</line>
+          <line>111</line>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/services/TripRecordCSVBuilder.java</url>
-          <line>50</line>
+          <line>51</line>
           <option name="timeStamp" value="49" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/services/TripRecordCSVBuilder.java</url>
-          <line>56</line>
+          <line>57</line>
           <option name="timeStamp" value="50" />
         </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
