@@ -15,8 +15,6 @@ import java.time.LocalDateTime;
 public class TapRecord {
 
     private Long id;
-
-    // TODO: Fix tapDateTime to always with 2 digits seconds
     private LocalDateTime tapDateTimeUTC;
     private TapType tapType;
     private String stopId;
