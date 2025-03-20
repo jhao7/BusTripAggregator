@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52b64a52-164a-4a2d-806a-e2b61a764b28" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/TapRecordCSVMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/TapRecordCSVMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/TripAggregator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/TripAggregator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/TripRecordCSVBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/TripRecordCSVBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/services/TapRecordCSVMapperTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/services/TapRecordCSVMapperTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trips.csv" beforeDir="false" afterPath="$PROJECT_DIR$/trips.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,10 +148,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.org.example.services in BusTripAggregator" />
         <item itemvalue="JUnit.TapRecordCSVMapperTests" />
         <item itemvalue="JUnit.TripRecordCSVBuilderTests" />
         <item itemvalue="JUnit.TripRecordCSVBuilderTests.testBuildingTripRecordListFromUnorderedTapRecordList" />
-        <item itemvalue="JUnit.org.example.services in BusTripAggregator" />
         <item itemvalue="JUnit.TripRecordCSVBuilderTests.testBuildingBulkTripRecordListFromBulkTapRecordList" />
       </list>
     </recent_temporary>
@@ -185,23 +188,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/services/TripAggregator.java</url>
-          <line>26</line>
+          <line>25</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/services/TripRecordCSVBuilder.java</url>
           <line>111</line>
           <option name="timeStamp" value="25" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/services/TripRecordCSVBuilder.java</url>
-          <line>51</line>
-          <option name="timeStamp" value="49" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/services/TripRecordCSVBuilder.java</url>
-          <line>57</line>
-          <option name="timeStamp" value="50" />
         </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.NullPointerException" package="java.lang" />

@@ -1,6 +1,5 @@
 package org.example.services;
 
-import com.google.common.io.Resources;
 import org.example.models.TapRecord;
 import org.example.models.enums.TapType;
 import org.junit.jupiter.api.Assertions;
@@ -27,14 +26,14 @@ public class TapRecordCSVMapperTests {
 
     @Test
     public void testOrderedTapRecordCSVMapping() {
-        String uri = Resources.getResource("csvs/OrderedTapRecords.csv").getPath();
+        String uri = "csvs/OrderedTapRecords.csv";
         List<TapRecord> tapRecordList = tapRecordCSVMapper.buildTapRecordList(uri);
         Assertions.assertTrue(tapRecordList.equals(buildTapRecordListResult()));
     }
 
     @Test
     public void testOrderedBulkTapRecordCSVMapping() {
-        String uri = Resources.getResource("csvs/OrderedBulkTapRecords.csv").getPath();
+        String uri = "csvs/OrderedBulkTapRecords.csv";
         List<TapRecord> tapRecordList = tapRecordCSVMapper.buildTapRecordList(uri);
         Assertions.assertTrue(tapRecordList.equals(buildBulkTapRecordListResult()));
     }

@@ -1,6 +1,5 @@
 package org.example.services;
 
-import com.google.common.io.Resources;
 import jakarta.annotation.PostConstruct;
 import org.example.models.TapRecord;
 import org.example.models.TripRecord;
@@ -23,9 +22,8 @@ public class TripAggregator {
     @PostConstruct
     public void init() throws Exception {
         // Please replace "csvs/TapRecords.csv" with other resource names to test other taps csv files.
-        // E.g "csv/BulkTapRecords.csv", "csv/UnorderedTapRecords.csv" or "csv/UnorderedBulkTapRecords.csv"
-        List<TapRecord> tapRecordList = tapRecordCSVMapper.buildTapRecordList(
-                Resources.getResource("csvs/TapRecords.csv").getPath());
+        // E.g "csvs/BulkTapRecords.csv", "csvs/UnorderedTapRecords.csv" or "csvs/UnorderedBulkTapRecords.csv"
+        List<TapRecord> tapRecordList = tapRecordCSVMapper.buildTapRecordList("csvs/TapRecords.csv");
         List<TripRecord> tripRecordList = tripRecordCSVBuilder.buildTripRecordList(tapRecordList);
         tripRecordCSVBuilder.generateTripRecordCSV(tripRecordList);
     }

@@ -16,12 +16,11 @@ public class TapRecordCSVMapper {
 
     public static final String DATE_TIME_FORMATTER_TAP_RECORD = "dd-MM-yyyy HH:mm:ss";
 
-    public List<TapRecord> buildTapRecordList(String TapRecordCSVFilePath) {
+    public List<TapRecord> buildTapRecordList(String tapRecordCSVFilePath) {
         List<TapRecord> tapRecordList = new ArrayList<>();
 
         try {
-            File inputFile = new File(TapRecordCSVFilePath);
-            InputStream inputFileStream = new FileInputStream(inputFile);
+            InputStream inputFileStream = this.getClass().getClassLoader().getResourceAsStream(tapRecordCSVFilePath);
             BufferedReader br = new BufferedReader(new InputStreamReader(inputFileStream));
 
             tapRecordList = br.lines().skip(1).map(line -> buildTapRecord(line)).collect(Collectors.toList());
