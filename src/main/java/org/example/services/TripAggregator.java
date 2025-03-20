@@ -23,7 +23,7 @@ public class TripAggregator {
     @PostConstruct
     public void init() throws Exception {
         List<TapRecord> tapRecordList = tapRecordCSVMapper.buildTapRecordList(
-                Resources.getResource("csvs/UnOrderedTapRecords.csv").getPath());
+                Resources.getResource("csvs/BulkTapRecords.csv").getPath());
         List<TripRecord> tripRecordList = tripRecordCSVBuilder.buildTripRecordList(tapRecordList);
         tripRecordCSVBuilder.generateTripRecordCSV(tripRecordList);
     }

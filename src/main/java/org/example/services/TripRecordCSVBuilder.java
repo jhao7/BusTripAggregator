@@ -112,9 +112,8 @@ public class TripRecordCSVBuilder {
                 String finishedDateTime =
                         tr.getFinishedDateTimeUTC() == null ? "" : formatLocalDateTime(tr.getFinishedDateTimeUTC());
                 csvPrinter.printRecord(
-                        startedDateTime, finishedDateTime, tr.getDurationSecs(), tr.getChargeAmount(),
-                        tr.getFromStopId(), tr.getToStopId(), tr.getCompanyId(), tr.getBusId(), tr.getPan(),
-                        tr.getTripStatus());
+                        startedDateTime, finishedDateTime, tr.getDurationSecs(), tr.getFromStopId(), tr.getToStopId(),
+                        tr.getChargeAmount(), tr.getCompanyId(), tr.getBusId(), tr.getPan(), tr.getTripStatus());
             }
 
             csvPrinter.flush();

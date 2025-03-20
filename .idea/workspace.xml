@@ -5,14 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52b64a52-164a-4a2d-806a-e2b61a764b28" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/services/TapRecordCSVMapperTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/csvs/OrderedBulkTapRecords.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/csvs/OrderedTapRecords.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/services/TripRecordCSVBuilderTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/models/TapRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/models/TapRecord.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBootTestOrderedTapRecords.csv" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBootTestOrderedTapRecords.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/models/TripRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/models/TripRecord.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/TripAggregator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/TripAggregator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/TripRecordCSVBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/TripRecordCSVBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/csvs/UnOrderedTapRecords.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/csvs/UnOrderedTapRecords.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/csvs/TestOrderedTapRecords.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/csvs/BulkTapRecords.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +54,7 @@
       <recent name="$PROJECT_DIR$/src/test/resources/csvs" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TapRecordCSVMapperTests">
+  <component name="RunManager" selected="JUnit.TripRecordCSVBuilderTests.testBuildingBulkTripRecordListFromBulkTapRecordList">
     <configuration name="BusTripAggregatorApplication" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.BusTripAggregatorApplication" />
       <module name="BusTripAggregator" />
@@ -73,39 +72,8 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.example.services" />
       <option name="MAIN_CLASS_NAME" value="org.example.services.TapRecordCSVMapperTests" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TapRecordCSVMapperTests.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="BusTripAggregator" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example.services" />
-      <option name="MAIN_CLASS_NAME" value="org.example.services.TapRecordCSVMapperTests" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TapRecordCSVMapperTests.testOrderedBulkTapRecordCSVMapping" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="BusTripAggregator" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example.services" />
-      <option name="MAIN_CLASS_NAME" value="org.example.services.TapRecordCSVMapperTests" />
-      <option name="METHOD_NAME" value="testOrderedBulkTapRecordCSVMapping" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -126,19 +94,69 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TripRecordCSVBuilderTests.testBuildingBulkTripRecordListFromBulkTapRecordList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BusTripAggregator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.services" />
+      <option name="MAIN_CLASS_NAME" value="org.example.services.TripRecordCSVBuilderTests" />
+      <option name="METHOD_NAME" value="testBuildingBulkTripRecordListFromBulkTapRecordList" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TripRecordCSVBuilderTests.testBuildingTripRecordListFromOrderedTapRecordList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BusTripAggregator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.services" />
+      <option name="MAIN_CLASS_NAME" value="org.example.services.TripRecordCSVBuilderTests" />
+      <option name="METHOD_NAME" value="testBuildingTripRecordListFromOrderedTapRecordList" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TripRecordCSVBuilderTests.testBuildingTripRecordListFromTapRecordList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BusTripAggregator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.services" />
+      <option name="MAIN_CLASS_NAME" value="org.example.services.TripRecordCSVBuilderTests" />
+      <option name="METHOD_NAME" value="testBuildingTripRecordListFromTapRecordList" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.BusTripAggregatorApplication" />
+      <item itemvalue="JUnit.TripRecordCSVBuilderTests.testBuildingBulkTripRecordListFromBulkTapRecordList" />
+      <item itemvalue="JUnit.TripRecordCSVBuilderTests.testBuildingTripRecordListFromOrderedTapRecordList" />
+      <item itemvalue="JUnit.TripRecordCSVBuilderTests.testBuildingTripRecordListFromTapRecordList" />
       <item itemvalue="JUnit.TapRecordCSVMapperTests" />
-      <item itemvalue="JUnit.TapRecordCSVMapperTests.test" />
-      <item itemvalue="JUnit.TapRecordCSVMapperTests.testOrderedBulkTapRecordCSVMapping" />
       <item itemvalue="JUnit.TapRecordCSVMapperTests.testOrderedTapRecordCSVMapping" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TripRecordCSVBuilderTests.testBuildingBulkTripRecordListFromBulkTapRecordList" />
+        <item itemvalue="JUnit.TripRecordCSVBuilderTests.testBuildingTripRecordListFromTapRecordList" />
+        <item itemvalue="JUnit.TripRecordCSVBuilderTests.testBuildingTripRecordListFromOrderedTapRecordList" />
         <item itemvalue="JUnit.TapRecordCSVMapperTests" />
         <item itemvalue="JUnit.TapRecordCSVMapperTests.testOrderedTapRecordCSVMapping" />
-        <item itemvalue="JUnit.TapRecordCSVMapperTests.testOrderedBulkTapRecordCSVMapping" />
-        <item itemvalue="JUnit.TapRecordCSVMapperTests.test" />
       </list>
     </recent_temporary>
   </component>
@@ -183,14 +201,29 @@
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/org/example/services/TapRecordCSVMapperTests.java</url>
-          <line>104</line>
-          <option name="timeStamp" value="34" />
+          <url>file://$PROJECT_DIR$/src/test/java/org/example/services/TripRecordCSVBuilderTests.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="46" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/org/example/services/TapRecordCSVMapperTests.java</url>
-          <line>28</line>
-          <option name="timeStamp" value="35" />
+          <url>file://$PROJECT_DIR$/src/test/java/org/example/services/TripRecordCSVBuilderTests.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/example/services/TripRecordCSVBuilderTests.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/services/TripRecordCSVBuilder.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/services/TripRecordCSVBuilder.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="50" />
         </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.NullPointerException" package="java.lang" />
@@ -203,5 +236,9 @@
         <PinnedItemInfo parentTag="org.example.models.TapRecord" memberName="tapType" />
       </pinned-members>
     </pin-to-top-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
