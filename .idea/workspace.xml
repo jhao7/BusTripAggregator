@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52b64a52-164a-4a2d-806a-e2b61a764b28" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/csvs/UnorderedBulkTapRecords.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringBootTestOrderedTapRecords.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/TripAggregator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/TripAggregator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/TripRecordCSVBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/TripRecordCSVBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/csvs/UnOrderedTapRecords.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/csvs/UnorderedTapRecords.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/services/TripRecordCSVBuilderTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/services/TripRecordCSVBuilderTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +48,7 @@
       <recent name="$PROJECT_DIR$/src/test/resources/csvs" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TapRecordCSVMapperTests">
+  <component name="RunManager" selected="Application.BusTripAggregatorApplication">
     <configuration name="BusTripAggregatorApplication" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.BusTripAggregatorApplication" />
       <module name="BusTripAggregator" />
