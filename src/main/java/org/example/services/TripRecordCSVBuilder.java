@@ -9,6 +9,7 @@ import org.example.models.TripRecord;
 import org.example.models.enums.TapType;
 import org.example.models.enums.TripRecordCSVHeader;
 import org.example.models.enums.TripStatus;
+import org.springframework.stereotype.Service;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -21,6 +22,7 @@ import java.util.*;
 
 import static java.util.stream.Collectors.groupingBy;
 
+@Service
 public class TripRecordCSVBuilder {
 
     private static final String STOP_ID_1 = "Stop1";
@@ -94,7 +96,7 @@ public class TripRecordCSVBuilder {
 
     public void generateTripRecordCSV(List<TripRecord> tripRecord) throws IOException {
         try {
-            BufferedWriter writer = Files.newBufferedWriter(Paths.get("TestOrderedTapRecords.csv"));
+            BufferedWriter writer = Files.newBufferedWriter(Paths.get("SpringBootTestOrderedTapRecords.csv"));
 
             CSVFormat csvFormat = CSVFormat.DEFAULT.builder()
                     .setDelimiter(", ")

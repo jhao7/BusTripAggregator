@@ -2,6 +2,7 @@ package org.example.services;
 
 import org.example.models.TapRecord;
 import org.example.models.enums.TapType;
+import org.springframework.stereotype.Service;
 
 import java.io.*;
 import java.time.LocalDateTime;
@@ -10,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Service
 public class TapRecordCSVMapper {
 
     public static final String DATE_TIME_FORMATTER_TAP_RECORD = "dd-MM-yyyy HH:mm:ss";
