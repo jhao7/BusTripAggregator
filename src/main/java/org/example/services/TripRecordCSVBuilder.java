@@ -21,6 +21,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 import static java.util.stream.Collectors.groupingBy;
+import static org.example.services.TapRecordCSVMapper.DATE_TIME_FORMATTER_TAP_RECORD;
 
 @Service
 public class TripRecordCSVBuilder {
@@ -34,7 +35,6 @@ public class TripRecordCSVBuilder {
     private static final double CHARGE_AMOUNT_MID_FARE = 5.50;
     private static final double CHARGE_AMOUNT_HIGHER_FARE = 7.30;
     private static final double CHARGE_AMOUNT_CANCELLED_FARE = 0.00;
-    public static final String DATE_TIME_FORMATTER_TAP_RECORD = "dd-MM-yyyy HH:mm:ss";
 
     private static final Map<Pair<String, String>, Double> CHARGE_AMOUNT_COMPLETED_FARE_RULES = new HashMap<>() {{
         put(new ImmutablePair<>(STOP_ID_1, STOP_ID_2), Double.valueOf(CHARGE_AMOUNT_LOWER_FARE));
@@ -67,12 +67,14 @@ public class TripRecordCSVBuilder {
                     if (listIterator.hasNext()) {
                         TapRecord t2 = listIterator.next();
                         if (t2.getTapType().equals(TapType.OFF)) {
-                            Long durationSecs = calculateDurationInSeconds(t1.getTapDateTimeUTC(), t2.getTapDateTimeUTC());
+                            Long durationSecs =
+                                    calculateDurationInSeconds(t1.getTapDateTimeUTC(), t2.getTapDateTimeUTC());
                             if (t1.getStopId().equals(t2.getStopId())) {
                                 chargeAmount = formatDoubleWithTwoDecimals(calculateCancelledChargeAmount());
                                 tripRecord = buildCancelledTripRecord(t1, t2, durationSecs, chargeAmount);
                             } else {
-                                chargeAmount = formatDoubleWithTwoDecimals(calculateCompletedChargeAmount(t1.getStopId(), t2.getStopId()));
+                                chargeAmount = formatDoubleWithTwoDecimals(
+                                        calculateCompletedChargeAmount(t1.getStopId(), t2.getStopId()));
                                 tripRecord = buildCompletedTripRecord(t1, t2, durationSecs, chargeAmount);
                             }
                         } else {
@@ -107,10 +109,12 @@ public class TripRecordCSVBuilder {
 
             for (TripRecord tr : tripRecord) {
                 String startedDateTime = formatLocalDateTime(tr.getStartedDateTimeUTC());
-                String finishedDateTime = tr.getFinishedDateTimeUTC() == null ? "" : formatLocalDateTime(tr.getFinishedDateTimeUTC());
-                csvPrinter.printRecord(startedDateTime, finishedDateTime, tr.getDurationSecs(),
-                        tr.getChargeAmount(), tr.getFromStopId(), tr.getToStopId(), tr.getCompanyId(), tr.getBusId(),
-                        tr.getPan(), tr.getTripStatus());
+                String finishedDateTime =
+                        tr.getFinishedDateTimeUTC() == null ? "" : formatLocalDateTime(tr.getFinishedDateTimeUTC());
+                csvPrinter.printRecord(
+                        startedDateTime, finishedDateTime, tr.getDurationSecs(), tr.getChargeAmount(),
+                        tr.getFromStopId(), tr.getToStopId(), tr.getCompanyId(), tr.getBusId(), tr.getPan(),
+                        tr.getTripStatus());
             }
 
             csvPrinter.flush();
