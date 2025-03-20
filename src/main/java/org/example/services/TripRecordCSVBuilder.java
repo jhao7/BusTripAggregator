@@ -98,7 +98,7 @@ public class TripRecordCSVBuilder {
 
     public void generateTripRecordCSV(List<TripRecord> tripRecord) throws IOException {
         try {
-            BufferedWriter writer = Files.newBufferedWriter(Paths.get("SpringBootTestOrderedTapRecords.csv"));
+            BufferedWriter writer = Files.newBufferedWriter(Paths.get("GeneratedTripRecords.csv"));
 
             CSVFormat csvFormat = CSVFormat.DEFAULT.builder()
                     .setDelimiter(", ")

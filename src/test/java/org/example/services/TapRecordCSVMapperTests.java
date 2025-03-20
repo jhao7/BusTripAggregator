@@ -18,6 +18,8 @@ public class TapRecordCSVMapperTests {
 
     private TapRecordCSVMapper tapRecordCSVMapper;
 
+    private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern(DATE_TIME_FORMATTER_TAP_RECORD);
+
     @BeforeEach
     public void setUp() {
         tapRecordCSVMapper = new TapRecordCSVMapper();
@@ -39,7 +41,6 @@ public class TapRecordCSVMapperTests {
 
     private List<TapRecord> buildTapRecordListResult() {
         List<TapRecord> tapRecordList = new ArrayList<>();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern(DATE_TIME_FORMATTER_TAP_RECORD);
 
         tapRecordList.add(new TapRecord(1L, LocalDateTime.parse("22-01-2023 13:00:00", formatter), TapType.ON,
                 "Stop1", "Company1", "Bus37", "5500005555555559"));
@@ -58,7 +59,6 @@ public class TapRecordCSVMapperTests {
 
     private List<TapRecord> buildBulkTapRecordListResult() {
         List<TapRecord> tapRecordList = new ArrayList<>();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern(DATE_TIME_FORMATTER_TAP_RECORD);
 
         tapRecordList.add(new TapRecord(1L, LocalDateTime.parse("22-01-2023 13:00:00", formatter), TapType.ON,
                 "Stop1", "Company1", "Bus37", "5500005555555559"));
